@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDGAME</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/77ebc8126c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @media  only screen and (max-width: 768px){
+          body {
+          display: block;
+          width: 100vw;
+          height: 100vh;
+        }
+
+
+          header .sidebar, .content {
+            width: 100vw;
+            height: 100vh; 
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <aside class="sidebar">
+        <h1 class="sidebar-title">
+          MDGAME <i class="fa-solid fa-gamepad"></i>
+        </h1>
+
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item sidebar-menu-item-active">
+            <a href="#" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Home</a
+            >
+          </li>
+          <li class="sidebar-menu-item" style="margin-top: 0.5rem;">
+            <a onclick="openGamePage('HANGMAN')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Hangman</a
+            >
+          </li>
+          
+
+          <li class="sidebar-menu-item">
+            <a onclick="openGamePage('TETRIS')"class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Tetris</a
+            >
+          </li>
+
+          <li class="sidebar-menu-item">
+            <a onclick="openGamePage('WORDLE')"class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Wordle</a
+            >
+          </li>
+          
+        </ul>
+      </aside>
+
+      <article class="content">
+        <nav class="content-nav">
+          <div class="search">
+            <input type="text" placeholder="pesquisar..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </nav>
+
+        <!-- GAME BOX
+        <div class="recommend" id="game1">
+          <h3>Recommend for you</h3>
+
+          <div class="game-box">
+            <div class="card">
+              <img
+                src="https://tm.ibxk.com.br/2013/9/materias/2356685072617396.jpg"
+                alt=""
+              />
+              <div class="content">
+                <h5>Gta v</h5>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="people-plays">
+          <h3>Jogos</h3>
+
+          <div class="games-box">
+            <button class="game-info" onclick="openGamePage('HANGMAN')" id="HANGMAN">
+                <div class="card">
+                    <img
+                      src="https://play-lh.googleusercontent.com/3vU01hZIomX95xALi7bH1l2OEHFLZYvYsEx0OIjUS1FIPNrIua56phuSd8Fy4Yg9mMM=w240-h480-rw"
+                      alt=""
+                    />
+                </div>
+                
+            </button>
+
+            <button class="game-info" onclick="openGamePage('WORDLE')" >
+                <div class="card">
+                    <img
+                      src="https://play-lh.googleusercontent.com/6JSPr7ujjFuwqwqS44uhNV4IMNColj2Qe7ENMJWmg_BgTzuW5o70d3HPrxetNWaGC5Bj=w240-h480-rw"
+                      alt=""
+                    />
+                </div>
+            </button>
+  
+              <button class="game-info" onclick="openGamePage('TETRIS')" >
+                <div class="card">
+                    <img
+                      src="https://img.odcdn.com.br/wp-content/uploads/2023/02/shutterstock_1797933301.jpg"
+                      alt=""
+                    />
+                </div>
+            </button>
+
+            <button class="game-info" onclick="openGamePage('HANGMAN')" id="HANGMAN">
+              <div class="card">
+                  <img
+                    src="https://play-lh.googleusercontent.com/3vU01hZIomX95xALi7bH1l2OEHFLZYvYsEx0OIjUS1FIPNrIua56phuSd8Fy4Yg9mMM=w240-h480-rw"
+                    alt=""
+                  />
+              </div>
+              
+          </button>
+
+            <button class="game-info" onclick="openGamePage('WORDLE')" >
+                <div class="card">
+                    <img
+                      src="https://play-lh.googleusercontent.com/6JSPr7ujjFuwqwqS44uhNV4IMNColj2Qe7ENMJWmg_BgTzuW5o70d3HPrxetNWaGC5Bj=w240-h480-rw"
+                      alt=""
+                    />
+                </div>
+            </button>
+
+            <button class="game-info" onclick="openGamePage('TETRIS')" >
+              <div class="card">
+                  <img
+                    src="https://img.odcdn.com.br/wp-content/uploads/2023/02/shutterstock_1797933301.jpg"
+                    alt=""
+                  />
+              </div>
+          </button>
+
+
+            <button class="game-info" onclick="openGamePage('HANGMAN')" id="HANGMAN">
+              <div class="card">
+                  <img
+                    src="https://play-lh.googleusercontent.com/3vU01hZIomX95xALi7bH1l2OEHFLZYvYsEx0OIjUS1FIPNrIua56phuSd8Fy4Yg9mMM=w240-h480-rw"
+                    alt=""
+                  />
+              </div>
+              
+          </button>
+
+            <button class="game-info" onclick="openGamePage('WORDLE')" >
+              <div class="card">
+                  <img
+                    src="https://play-lh.googleusercontent.com/6JSPr7ujjFuwqwqS44uhNV4IMNColj2Qe7ENMJWmg_BgTzuW5o70d3HPrxetNWaGC5Bj=w240-h480-rw"
+                    alt=""
+                  />
+              </div>
+            </button>
+
+            <button class="game-info" onclick="openGamePage('TETRIS')" >
+            <div class="card">
+                <img
+                  src="https://img.odcdn.com.br/wp-content/uploads/2023/02/shutterstock_1797933301.jpg"
+                  alt=""
+                />
+            </div>
+            </button>
+
+            <button class="game-info" onclick="openGamePage('HANGMAN')" id="HANGMAN">
+              <div class="card">
+                  <img
+                    src="https://play-lh.googleusercontent.com/3vU01hZIomX95xALi7bH1l2OEHFLZYvYsEx0OIjUS1FIPNrIua56phuSd8Fy4Yg9mMM=w240-h480-rw"
+                    alt=""
+                  />
+              </div>
+              
+            </button>
+
+        </div>
+      </article>
+      
+    </header>
+    
+    <script src="js/main.js"></script>
+  </body>
+</html>

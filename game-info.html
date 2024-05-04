@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDGAME</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/77ebc8126c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <aside class="sidebar">
+        <h1 class="sidebar-title">
+          MDGAME <i class="fa-solid fa-gamepad"></i>
+        </h1>
+
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item">
+            <a href="index.html" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Home</a
+            >
+          </li>
+          <li class="sidebar-menu-item" style="margin-top: 0.5rem">
+            <a onclick="openGamePage('HANGMAN')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Hangman</a
+            >
+          </li>
+
+          <li class="sidebar-menu-item">
+            <a onclick="openGamePage('TETRIS')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Tetris</a
+            >
+          </li>
+
+          <li class="sidebar-menu-item">
+            <a onclick="openGamePage('WORDLE')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Wordle</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <div class="game-info-box">
+        <div class="game-about-box">
+          <div class="img-video-box">
+            <img id="game-image" src="" alt="" />
+          </div>
+          <h4>Sobre o jogo</h4>
+
+          <p id="description"></p>
+
+          <div class="btns">
+            <a id="link-game" href=""><i class="fa-solid fa-play"></i>Jogar</a>
+          </div>
+        </div>
+        <div class="game-images-box" id="related-cards">
+          <div class="cards">
+            <div class="card">
+              <img id="game-image-2" src="" alt="" />
+            </div>
+            <div class="card">
+              <img id="game-image-3" alt="" id="game-img" />
+            </div>
+            <div class="card">
+              <img id="game-image-4" src="" alt="" id="game-img" />
+            </div>
+            <div class="card">
+              <img id="game-image-5" src="" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="js/main.js"></script>
+    <script src="js/gameData.js"></script>
+    <script src="js/loadGame.js"></script>
+  </body>
+</html>

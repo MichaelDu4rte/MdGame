@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDGAME | HangMan</title>
+
+    <link rel="stylesheet" href="../../style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/77ebc8126c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @media screen and (max-width: 768px) {
+        header {
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .content {
+          height: 100vh;
+          width: 100vw;
+        }
+        .sidebar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <aside class="sidebar">
+        <h1 class="sidebar-title">
+          MDGAME <i class="fa-solid fa-gamepad"></i>
+        </h1>
+
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item sidebar-menu-item-active">
+            <a onclick="openGamePage('HANGMAN')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Hangman</a
+            >
+          </li>
+
+          <li class="sidebar-menu-item" style="margin-top: 0.5rem">
+            <a href="../../index.html" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Home</a
+            >
+          </li>
+
+          <li class="sidebar-menu-item">
+            <a onclick="openGamePage('TETRIS')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Tetris</a
+            >
+          </li>
+
+          <li class="sidebar-menu-item">
+            <a onclick="openGamePage('WORDLE')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Wordle</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <article class="content">
+        <!-- GAME BOX -->
+        <div class="game-container">
+          <div id="options-container"></div>
+          <div id="letter-container" class="letter-container hide"></div>
+          <div id="user-input-section"></div>
+
+          <canvas id="canvas"></canvas>
+          <div id="new-game-container" class="new-game-popup hide">
+            <div id="result-text"></div>
+            <button id="new-game-button">Novo jogo</button>
+            <button
+              id="new-game-button"
+              style="margin-top: 0.5rem"
+              onclick="window.location.href = '../../index.html'"
+            >
+              Escolher outro jogo
+            </button>
+          </div>
+        </div>
+      </article>
+    </header>
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDGAME | Wordle</title>
+
+    <link rel="stylesheet" href="../../style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/77ebc8126c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @media screen and (max-width: 768px) {
+        header {
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .content {
+          height: 100vh;
+          width: 100vw;
+        }
+        .sidebar {
+          display: none;
+        }
+
+        .wordle {
+          margin-left: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <aside class="sidebar">
+        <h1 class="sidebar-title">
+          MDGAME <i class="fa-solid fa-gamepad"></i>
+        </h1>
+
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item sidebar-menu-item-active">
+            <a onclick="openGamePage('WORDLE')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Wordle</a
+            >
+          </li>
+          <li class="sidebar-menu-item" style="margin-top: 0.5rem">
+            <a href="../../index.html" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Home</a
+            >
+          </li>
+
+          <li class="sidebar-menu-item">
+            <a onclick="openGamePage('HANGMAN')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Hangman</a
+            >
+          </li>
+
+          <li class="sidebar-menu-item">
+            <a onclick="openGamePage('TETRIS')" class="sidebar-menu-link"
+              ><i class="fa-solid fa-star"></i>Tetris</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <article class="content wordle">
+        <h1 id="title">Wordle</h1>
+        <a href="../../index.html" class="btn-back">Voltar</a>
+        <br />
+        <div id="board"></div>
+
+        <br />
+        <h1 id="answer"></h1>
+      </article>
+    </header>
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
